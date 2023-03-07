@@ -20,9 +20,9 @@ void fillArray(array_t a) {
   
     size_t i, j;
   
-    for (i = 0; i < MAX_SIZE; i++)
-	for (j = 0; j < MAX_SIZE; j++)
-	    a[i * MAX_SIZE + j] = (i + 1) * (j + 1);
+  for (i = 0; i < MAX_SIZE; i++)
+    for (j = 0; j < MAX_SIZE; j++)
+      a[i * MAX_SIZE + j] = (i + 1) * (j + 1);
 }
 
 int64_t sumA(array_t a, size_t rows, size_t cols) {
@@ -97,47 +97,47 @@ int main() {
     fillArray(test_array);
   
     cache = cache_new(16384, 64, 1, CACHE_REPLACEMENTPOLICY_LRU);
-    printf("Sum = %ld\n", sumA(test_array, 64, 64));
+    printf("Sum = %lld\n", sumA(test_array, 64, 64));
     print_stats();
     cache_free(cache);
   
     cache = cache_new(16384, 64, 1, CACHE_REPLACEMENTPOLICY_LRU);
-    printf("Sum = %ld\n", sumB(test_array, 64, 64));
+    printf("Sum = %lld\n", sumB(test_array, 64, 64));
     print_stats();
     cache_free(cache);
   
     cache = cache_new(16384, 64, 1, CACHE_REPLACEMENTPOLICY_LRU);
-    printf("Sum = %ld\n", sumC(test_array, 64, 64));
+    printf("Sum = %lld\n", sumC(test_array, 64, 64));
     print_stats();
     cache_free(cache);
 
     cache = cache_new(16384, 64, 4, CACHE_REPLACEMENTPOLICY_LRU);
-    printf("Sum = %ld\n", sumA(test_array, 64, 64));
+    printf("Sum = %lld\n", sumA(test_array, 64, 64));
     print_stats();
     cache_free(cache);
   
     cache = cache_new(16384, 64, 4, CACHE_REPLACEMENTPOLICY_LRU);
-    printf("Sum = %ld\n", sumB(test_array, 64, 64));
+    printf("Sum = %lld\n", sumB(test_array, 64, 64));
     print_stats();
     cache_free(cache);
   
     cache = cache_new(16384, 64, 4, CACHE_REPLACEMENTPOLICY_LRU);
-    printf("Sum = %ld\n", sumC(test_array, 64, 64));
+    printf("Sum = %lld\n", sumC(test_array, 64, 64));
     print_stats();
     cache_free(cache);
 
     cache = cache_new(16384, 64, 8, CACHE_REPLACEMENTPOLICY_RANDOMIZED_MARKING);
-    printf("Sum = %ld\n", sumD(test_array, 12, 256, 5));
+    printf("Sum = %lld\n", sumD(test_array, 12, 256, 5));
     print_stats();
     cache_free(cache);
 
     cache = cache_new(16384, 64, 8, CACHE_REPLACEMENTPOLICY_RANDOMIZED_MARKING);
-    printf("Sum = %ld\n", sumD(test_array, 12, 256, 5));
+    printf("Sum = %lld\n", sumD(test_array, 12, 256, 5));
     print_stats();
     cache_free(cache);
 
     cache = cache_new(16384, 64, 8, CACHE_REPLACEMENTPOLICY_RANDOMIZED_MARKING);
-    printf("Sum = %ld\n", sumD(test_array, 12, 256, 5));
+    printf("Sum = %lld\n", sumD(test_array, 12, 256, 5));
     print_stats();
     cache_free(cache);
 
