@@ -1,0 +1,12 @@
+[submodule "Read-Sequential_Asynchronous_Thread"]
+	path = Read-Sequential_Asynchronous_Thread
+	url = git@github.com:Tengs-Penkwe/Read-Sequential_Asynchronous_Thread.git
+[submodule "Synchronization"]
+	path = Synchronization
+	url = git@github.com:Tengs-Penkwe/Synchronization.git
+[submodule "Cache"]
+	path = Cache
+	url = git@github.com:Tengs-Penkwe/Cache.git
+[submodule "File-Cache"]
+	path = File-Cache
+	url = git@github.com:Tengs-Penkwe/File-Cache.git
